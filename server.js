@@ -4,7 +4,9 @@ import next from "next";
 import WebSocket from "ws";
 import { WebSocketServer } from "ws";
 import { startProlinkNetwork, setupProLinkWebsocket } from "./lib/prolink.js";
+import log from "./logger.js";
 
+const service = "server";
 const app = express();
 const server = app.listen(3000);
 const wss = new WebSocketServer({ noServer: true });
@@ -24,6 +26,7 @@ nextApp.prepare().then(() => {
 				ws.readyState === WebSocket.OPEN &&
 				message.toString() !== `{"event":"ping"}`
 			) {
+				log.debug("WebSocket message received", { service, message });
 				ws.send(message, { binary: isBinary });
 			}
 		});
