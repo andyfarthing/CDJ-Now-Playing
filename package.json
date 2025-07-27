@@ -20,8 +20,8 @@
 		"winston": "^3.8.2"
 	},
 	"devDependencies": {
-		"@types/react": "18.3.9",
-		"eslint": "^8.57.1",
-		"eslint-config-next": "15.1.2"
+		"@types/react": "19.1.8",
+		"eslint": "^9.32.0",
+		"eslint-config-next": "15.4.4"
 	}
 }
