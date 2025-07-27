@@ -10,6 +10,7 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"@andyfarthing/prolink-connect": "^0.11.0",
 		"express": "^5.1.0",
 		"musicbrainz-api": "^0.25.1",
 		"next": "^15.4.4",
